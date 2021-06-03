@@ -1,22 +1,25 @@
 name: Push File
 
-on: push
+on:
+  push:
+    branches:
+    - main
 
 jobs:
   copy-file:
+    name: deploy latest website
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Pushes test file
-      uses: eureka-imagineee-server/Eureka-servers@main
+    - name: Pushes README file
+      uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source_file: 'README.md'
         destination_repo: 'eureka-imagineee-server/eureka-imagineee-server.github.io'
-        destination_folder: '/'
         user_email: 'imagineeelego@gmail.com'
         user_name: 'imagineeeinc'
         commit_message: 'updated site from Eureka server repo'
