@@ -1,11 +1,11 @@
 # Eureka-servers
 Eureka Servers is imagineee's own custom server to serve the services and apps by imagineee
 
-links:
+## links:
 - [Discusions](https://github.com/eureka-imagineee-server/Eureka-servers/discussions)
 - [Website](https://eureka-imagineee-server.github.io/)
 
-services:
+## services:
 - [API](https://github.com/eureka-imagineee-server/api)
   - the leading API service for imagineee's apps and service to use.   
 - [CDN](https://github.com/eureka-imagineee-server/cdn)
